@@ -1,0 +1,78 @@
+{
+  "name": "vuetify-sonner",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.6.6",
+  "description": "",
+  "author": "Robert Soriano <sorianorobertc@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/wobsoriano/vuetify-sonner#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wobsoriano/vuetify-sonner.git"
+  },
+  "bugs": "https://github.com/wobsoriano/vuetify-sonner/issues",
+  "keywords": [
+    "vuetify",
+    "vue",
+    "confirm",
+    "snackbar",
+    "toast"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "*",
+        "dist/*",
+        "dist/*.d.ts",
+        "dist/*/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "vite serve dev",
+    "dev:build": "vite build dev",
+    "dev:preview": "vite preview dev",
+    "lint": "eslint .",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp && npm publish"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0",
+    "vuetify": "^3.3.0"
+  },
+  "dependencies": {
+    "nanoid": "^4.0.2",
+    "vue-sonner": "^0.3.3"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.6",
+    "@mdi/font": "^7.2.96",
+    "@types/node": "^18.16.19",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "bumpp": "^9.1.1",
+    "eslint": "^8.44.0",
+    "roboto-fontface": "^0.10.0",
+    "sass": "^1.63.6",
+    "typescript": "^5.1.6",
+    "unbuild": "^1.2.1",
+    "vite": "^4.3.9",
+    "vite-plugin-vuetify": "^1.0.2",
+    "vue": "^3.3.4",
+    "vuetify": "^3.3.6"
+  }
+}
