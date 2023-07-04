@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import type { Props } from './types'
+import { VCard, VCardActions, VCardText } from 'vuetify/components/VCard'
+import { VBtn } from 'vuetify/components/VBtn'
+import type { ToastProps } from './types'
 
-withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<ToastProps>(), {
   showCloseButton: true,
-  closeButtonProps: {
+  closeButtonProps: () => ({
     variant: 'text',
     color: 'pink',
-  },
+  }),
   closeButtonText: 'Close',
 })
 
@@ -14,21 +16,21 @@ defineEmits(['closeToast'])
 </script>
 
 <template>
-  <v-card class="card-snackbar" v-bind="cardProps">
+  <VCard class="card-snackbar" v-bind="cardProps">
     <div class="d-flex flex-no-wrap justify-space-between">
-      <v-card-text v-bind="cardTextProps">
+      <VCardText v-bind="cardTextProps">
         {{ text }}
-      </v-card-text>
-      <v-card-actions v-if="showCloseButton" v-bind="cardActionProps">
-        <v-btn
+      </VCardText>
+      <VCardActions v-if="showCloseButton" v-bind="cardActionProps">
+        <VBtn
           v-bind="closeButtonProps"
           @click="$emit('closeToast')"
         >
           {{ closeButtonText }}
-        </v-btn>
-      </v-card-actions>
+        </VBtn>
+      </VCardActions>
     </div>
-  </v-card>
+  </VCard>
 </template>
 
 <style>
