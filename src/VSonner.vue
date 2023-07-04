@@ -6,8 +6,7 @@ type Props = Omit<ToasterProps, 'richColors' | 'theme' | 'closeButton' | 'toastO
 
 withDefaults(defineProps<Props>(), {
   position: 'bottom-right',
-  // @ts-expect-error: TODO
-  hotkey: ['altKey', 'KeyT'],
+  hotkey: () => ['altKey', 'KeyT'],
   expand: false,
   visibleToasts: 3,
 })
