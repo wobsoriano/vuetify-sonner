@@ -65,7 +65,7 @@ Behind the scenes, the toast component use Vuetify [Cards](https://vuetifyjs.com
 You can change the position through the `position` prop on the <VSonner /> component. Default is `bottom-center`.
 
 ```vue
-<Toaster position="top-center" />
+<VSonner position="top-center" />
 ```
 
 ### Expanded
@@ -73,7 +73,7 @@ You can change the position through the `position` prop on the <VSonner /> compo
 Toasts can also be expanded by default through the `expand` prop. You can also change the amount of visible toasts which is 3 by default.
 
 ```vue
-<Toaster expand :visible-toasts="9" />
+<VSonner expand :visible-toasts="9" />
 ```
 
 ### Styling a toast
@@ -110,7 +110,7 @@ toast.dismiss()
 You can change the duration of each toast by using the `duration` property, or change the duration of all toasts like this:
 
 ```vue
-<Toaster :duration="10000" />
+<VSonner :duration="10000" />
 ```
 
 ```js
@@ -140,7 +140,7 @@ toast('Event has been created', {
 You can focus on the toast area by pressing ⌥/alt + T. You can override it by providing an array of event.code values for each key.
 
 ```vue
-<Toaster :hotkey="['KeyC']" />
+<VSonner :hotkey="['KeyC']" />
 ```
 
 ## License
