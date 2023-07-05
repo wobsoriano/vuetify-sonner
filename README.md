@@ -1,3 +1,5 @@
+https://github.com/wobsoriano/vuetify-sonner/assets/13049130/1602f557-9dff-47df-8fd9-9057d4c423cd
+
 # vuetify-sonner
 
 Stackable toast component for Vuetify.
