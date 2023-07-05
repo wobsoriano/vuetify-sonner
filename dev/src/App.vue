@@ -13,7 +13,7 @@ const expand = ref(false)
 <template>
   <v-app theme="dark">
     <v-main>
-      <VSonner :position="position" :expand="expand" offset="300px" />
+      <VSonner :position="position" :expand="expand" />
       <div class="container">
         <Hero />
         <div class="content">
