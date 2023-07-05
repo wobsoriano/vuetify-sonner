@@ -13,15 +13,14 @@ const expand = ref(false)
 <template>
   <v-app theme="dark">
     <v-main>
-      <VSonner :position="position" :expand="expand">
-        <div class="container">
-          <Hero />
-          <div class="content">
-            <Position v-model:position="position" />
-            <Expand v-model:expand="expand" />
-          </div>
+      <VSonner :position="position" :expand="expand" />
+      <div class="container">
+        <Hero />
+        <div class="content">
+          <Position v-model:position="position" />
+          <Expand v-model:expand="expand" />
         </div>
-      </VSonner>
+      </div>
     </v-main>
   </v-app>
 </template>

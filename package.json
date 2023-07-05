@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "packageManager": "pnpm@8.6.6",
-  "description": "",
+  "description": "Stackable toast component for Vuetify.",
   "author": "Robert Soriano <sorianorobertc@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/wobsoriano/vuetify-sonner#readme",
