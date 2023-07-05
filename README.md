@@ -1,4 +1,5 @@
-https://github.com/wobsoriano/vuetify-sonner/assets/13049130/1602f557-9dff-47df-8fd9-9057d4c423cd
+https://github.com/wobsoriano/vuetify-sonner/assets/13049130/3dc381ec-95b2-4bd1-9df6-624210e9d9f4
+
 
 # vuetify-sonner
 
