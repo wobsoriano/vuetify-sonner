@@ -23,6 +23,7 @@ export const toast = Object.assign(toastFunction, {
   dismiss(toastId?: number | string) {
     return toastOriginal.dismiss(toastId)
   },
+  toastOriginal,
 })
 
 export {
