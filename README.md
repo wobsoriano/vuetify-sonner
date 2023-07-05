@@ -13,7 +13,7 @@ npm install vuetify-sonner
 
 ## Usage
 
-Add <VSonner /> to your app, it will be the place where all your toasts will be rendered. After that you can use toast() from anywhere in your app.
+Add `<VSonner />` to your app, it will be the place where all your toasts will be rendered. After that you can use `toast()` from anywhere in your app.
 
 ```vue
 <script setup lang="ts">
