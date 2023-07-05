@@ -8,11 +8,14 @@ import type { ToastProps } from './types'
 type Options = Omit<ToastProps, 'text'> & Pick<ExternalToast, 'duration' | 'onAutoClose' | 'onDismiss' | 'id' | 'important' | 'promise'>
 
 export function toast(text: string, options?: Options) {
+  const { description, action, ...rest } = options || {}
   return toastOriginal.custom(markRaw(h(Toast, {
-    ...options,
+    ...rest,
+    description,
+    action,
     text,
   })), {
-    ...options,
+    ...rest,
   })
 }
 

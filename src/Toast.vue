@@ -4,12 +4,8 @@ import { VBtn } from 'vuetify/components/VBtn'
 import type { ToastProps } from './types'
 
 withDefaults(defineProps<ToastProps>(), {
-  showCloseButton: true,
-  closeButtonProps: () => ({
-    variant: 'text',
-    color: 'pink',
-  }),
-  closeButtonText: 'Close',
+  vertical: false,
+  cardActionsProps: () => ({}),
 })
 
 defineEmits(['closeToast'])
@@ -17,16 +13,30 @@ defineEmits(['closeToast'])
 
 <template>
   <VCard class="card-snackbar" v-bind="cardProps">
-    <div class="d-flex flex-no-wrap justify-space-between">
+    <div :class="{ 'd-flex flex-no-wrap justify-space-between': !vertical }">
       <VCardText v-bind="cardTextProps">
-        {{ text }}
+        <template v-if="description">
+          <div class="pb-1">
+            {{ text }}
+          </div>
+          <p class="font-weight-light">
+            {{ description }}
+          </p>
+        </template>
+        <template v-else>
+          {{ text }}
+        </template>
       </VCardText>
-      <VCardActions v-if="showCloseButton" v-bind="cardActionProps">
+      <VCardActions v-if="action" v-bind="cardActionsProps">
+        <VSpacer />
         <VBtn
-          v-bind="closeButtonProps"
-          @click="$emit('closeToast')"
+          v-bind="action.buttonProps"
+          @click="() => {
+            $emit('closeToast')
+            action?.onClick()
+          }"
         >
-          {{ closeButtonText }}
+          {{ action.label }}
         </VBtn>
       </VCardActions>
     </div>
@@ -37,8 +47,8 @@ defineEmits(['closeToast'])
 .card-snackbar {
   background: rgb(var(--v-theme-surface-variant)) !important;
   color: rgb(var(--v-theme-on-surface-variant)) !important;
-  max-width: 672px;
-  min-width: 344px;
-  min-height: 48px;
+  max-width: 672px !important;
+  min-width: 344px !important;
+  min-height: 48px !important;
 }
 </style>

@@ -1,5 +1,5 @@
 import type { AllowedComponentProps, VNodeProps } from 'vue'
-import type { VBtn } from 'vuetify/components'
+import type { VBtn, VCard, VCardActions, VCardText } from 'vuetify/components'
 
 type ExtractProps<TComponent> =
   TComponent extends new () => {
@@ -10,10 +10,14 @@ type ExtractProps<TComponent> =
 
 export interface ToastProps {
   text: string
-  showCloseButton?: boolean
-  closeButtonProps?: ExtractProps<typeof VBtn>
-  cardProps?: ExtractProps<typeof VBtn>
-  cardTextProps?: ExtractProps<typeof VBtn>
-  cardActionProps?: ExtractProps<typeof VBtn>
-  closeButtonText?: string
+  description?: string
+  vertical?: boolean
+  cardProps?: ExtractProps<typeof VCard>
+  cardTextProps?: ExtractProps<typeof VCardText>
+  cardActionsProps?: ExtractProps<typeof VCardActions>
+  action?: {
+    label: string
+    onClick: () => void
+    buttonProps?: ExtractProps<typeof VBtn>
+  }
 }

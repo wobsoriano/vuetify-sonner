@@ -2,10 +2,10 @@
 import { Toaster } from 'vue-sonner'
 import type { ToasterProps } from 'vue-sonner/lib/types'
 
-type Props = Omit<ToasterProps, 'richColors' | 'theme' | 'closeButton' | 'toastOptions' | 'className' | 'style'>
+type Props = Omit<ToasterProps, 'richColors' | 'theme' | 'closeButton' | 'className' | 'style'>
 
 withDefaults(defineProps<Props>(), {
-  position: 'bottom-right',
+  position: 'bottom-center',
   hotkey: () => ['altKey', 'KeyT'],
   expand: false,
   visibleToasts: 3,
@@ -19,6 +19,7 @@ withDefaults(defineProps<Props>(), {
     :expand="expand"
     :visible-toasts="visibleToasts"
     :duration="duration"
+    :toast-options="toastOptions"
   />
   <slot />
 </template>

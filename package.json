@@ -56,7 +56,6 @@
     "vuetify": "^3.3.0"
   },
   "dependencies": {
-    "nanoid": "^4.0.2",
     "vue-sonner": "^0.3.3"
   },
   "devDependencies": {
