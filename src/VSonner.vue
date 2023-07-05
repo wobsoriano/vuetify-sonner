@@ -20,6 +20,7 @@ withDefaults(defineProps<Props>(), {
     :visible-toasts="visibleToasts"
     :duration="duration"
     :toast-options="toastOptions"
+    :offset="offset"
   />
   <slot />
 </template>

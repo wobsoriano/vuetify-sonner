@@ -87,6 +87,62 @@ toast('Event has been created', {
 })
 ```
 
+### Programmatically remove toast
+
+To remove a toast programmatically use `toast.dismiss(id)`.
+
+```js
+const toastId = toast('Event has been created')
+
+toast.dismiss(toastId)
+```
+
+You can also use the dismiss method without the id to dismiss all toasts.
+
+```js
+// Removes all toasts
+
+toast.dismiss()
+```
+
+### Duration
+
+You can change the duration of each toast by using the `duration` property, or change the duration of all toasts like this:
+
+```vue
+<Toaster :duration="10000" />
+```
+
+```js
+toast('Event has been created', {
+  duration: 10000,
+})
+
+// Persisent toast
+toast('Event has been created', {
+  duration: Number.POSITIVE_INFINITY,
+})
+```
+
+### On Close Callback
+
+You can pass `onDismiss` and `onAutoClose` callbacks. `onDismiss` gets fired when either the close button gets clicked or the toast is swiped. `onAutoClose` fires when the toast disappears automatically after it's timeout (`duration` prop).
+
+```js
+toast('Event has been created', {
+  onDismiss: t => console.log(`Toast with id ${t.id} has been dismissed`),
+  onAutoClose: t => console.log(`Toast with id ${t.id} has been closed automatically`),
+})
+```
+
+### Keyboard focus
+
+You can focus on the toast area by pressing ⌥/alt + T. You can override it by providing an array of event.code values for each key.
+
+```vue
+<Toaster :hotkey="['KeyC']" />
+```
+
 ## License
 
 MIT

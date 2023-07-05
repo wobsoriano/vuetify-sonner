@@ -7,7 +7,7 @@ import type { ToastProps } from './types'
 
 type Options = Omit<ToastProps, 'text'> & Pick<ExternalToast, 'duration' | 'onAutoClose' | 'onDismiss' | 'id' | 'important' | 'promise'>
 
-export function toast(text: string, options?: Options) {
+export function toastFunction(text: string, options?: Options) {
   const { description, action, ...rest } = options || {}
   return toastOriginal.custom(markRaw(h(Toast, {
     ...rest,
@@ -18,6 +18,12 @@ export function toast(text: string, options?: Options) {
     ...rest,
   })
 }
+
+export const toast = Object.assign(toastFunction, {
+  dismiss(toastId?: number | string) {
+    return toastOriginal.dismiss(toastId)
+  },
+})
 
 export {
   VSonner,
