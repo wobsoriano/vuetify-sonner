@@ -57,6 +57,9 @@ toast('Event has been created', {
   action: {
     label: 'Undo',
     onClick: () => console.log('Undo'),
+    buttonProps: {
+      // v-btn props
+    }
   },
 })
 ```
@@ -89,6 +92,12 @@ toast('Event has been created', {
     color: 'success',
     class: 'my-toast',
   },
+  cardTextProps: {
+    // Style the text and description container
+  },
+  cardActionsProps: {
+    // Style the action button container
+  }
 })
 ```
 
