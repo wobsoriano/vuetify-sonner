@@ -5,6 +5,8 @@ https://github.com/wobsoriano/vuetify-sonner/assets/13049130/3dc381ec-95b2-4bd1-
 
 Stackable toast component for Vuetify.
 
+> Note: Be aware that using stackable snackbars breaks the Material [spec](https://m2.material.io/components/snackbars#behavior). They should appear one at a time.
+
 ## Installation
 
 ```bash
