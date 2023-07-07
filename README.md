@@ -93,10 +93,10 @@ toast('Event has been created', {
     class: 'my-toast',
   },
   cardTextProps: {
-    // Style the text and description container
+    // v-card-text props
   },
   cardActionsProps: {
-    // Style the action button container
+    // v-card-actions props
   }
 })
 ```
