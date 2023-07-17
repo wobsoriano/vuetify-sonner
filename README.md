@@ -32,6 +32,33 @@ import { VSonner, toast } from 'vuetify-sonner'
 </template>
 ```
 
+### Nuxt
+
+```ts
+export default defineNuxtConfig({
+  build: {
+    transpile: ['vue-sonner']
+  }
+})
+```
+
+```vue
+<script setup lang="ts">
+import { VSonner, toast } from 'vuetify-sonner'
+</script>
+
+<template>
+  <VApp>
+    <ClientOnly>
+      <VSonner />
+    </ClientOnly>
+    <VBtn @click="toast('My first toast')">
+      Give me a toast
+    </VBtn>
+  </VApp>
+</template>
+```
+
 ### Default
 
 Most basic toast. You can customize it by passing an options object as the second argument.
