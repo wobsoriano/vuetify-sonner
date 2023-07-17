@@ -1,18 +1,10 @@
 {
+  "extends": "./tsconfig.base.json",
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "compilerOptions": {
-    "target": "es2018",
-    "useDefineForClassFields": true,
-    "module": "esnext",
-    "lib": ["ESNext", "DOM"],
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "jsx": "preserve",
+    "declaration": true,
+    "emitDeclarationOnly": true,
     "isolatedModules": true,
-    "strict": true,
-    "strictNullChecks": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "noEmit": true,
-    "skipDefaultLibCheck": true
+    "declarationDir": "./dist"
   }
 }

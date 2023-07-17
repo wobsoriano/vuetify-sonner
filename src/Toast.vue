@@ -43,7 +43,7 @@ defineEmits(['closeToast'])
   </VCard>
 </template>
 
-<style>
+<style scoped lang="scss">
 .card-snackbar {
   background: rgb(var(--v-theme-surface-variant)) !important;
   color: rgb(var(--v-theme-on-surface-variant)) !important;
