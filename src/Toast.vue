@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { VCard, VCardActions, VCardText } from 'vuetify/components/VCard'
-import { VBtn } from 'vuetify/components/VBtn'
+import { VBtn, VCard, VCardActions, VCardText, VSpacer } from 'vuetify/components'
 import type { ToastProps } from './types'
 
 withDefaults(defineProps<ToastProps>(), {
