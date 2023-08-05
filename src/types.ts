@@ -16,8 +16,8 @@ export interface ToastProps {
   cardTextProps?: ExtractProps<typeof VCardText>
   cardActionsProps?: ExtractProps<typeof VCardActions>
   action?: {
-    label: string
-    onClick: () => void
+    label?: string
+    onClick?: () => void
     buttonProps?: ExtractProps<typeof VBtn>
   }
 }

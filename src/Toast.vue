@@ -32,10 +32,10 @@ defineEmits(['closeToast'])
           v-bind="action.buttonProps"
           @click="() => {
             $emit('closeToast')
-            action?.onClick()
+            action?.onClick?.()
           }"
+          :text="action.label"
         >
-          {{ action.label }}
         </VBtn>
       </VCardActions>
     </div>
