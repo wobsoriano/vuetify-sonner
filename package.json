@@ -25,6 +25,10 @@
       "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
       "import": "./dist/index.mjs"
+    },
+    "./dist/*.css": {
+      "require": "./dist/*.css",
+      "import": "./dist/*.css"
     }
   },
   "main": "./dist/index.mjs",
