@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Toaster } from 'vue-sonner'
-import type { ToasterProps } from 'vue-sonner/lib/types'
+import type { ToasterProps } from 'vue-sonner/lib/Toaster.vue'
 
 type Props = Omit<ToasterProps, 'richColors' | 'theme' | 'closeButton' | 'className' | 'style'>
 
@@ -9,6 +9,7 @@ withDefaults(defineProps<Props>(), {
   hotkey: () => ['altKey', 'KeyT'],
   expand: false,
   visibleToasts: 3,
+  offset: 32,
 })
 </script>
 
