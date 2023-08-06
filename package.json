@@ -62,7 +62,7 @@
     "vuetify": "^3.3.0"
   },
   "dependencies": {
-    "vue-sonner": "^0.4.2"
+    "vue-sonner": "^0.3.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.40.0",

@@ -30,13 +30,12 @@ defineEmits(['closeToast'])
         <VSpacer />
         <VBtn
           v-bind="action.buttonProps"
+          :text="action.label"
           @click="() => {
             $emit('closeToast')
             action?.onClick?.()
           }"
-          :text="action.label"
-        >
-        </VBtn>
+        />
       </VCardActions>
     </div>
   </VCard>

@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   vue-sonner:
-    specifier: ^0.4.2
-    version: 0.4.2
+    specifier: ^0.3.3
+    version: 0.3.3
 
 devDependencies:
   '@antfu/eslint-config':
@@ -3418,8 +3418,8 @@ packages:
       - supports-color
     dev: true
 
-  /vue-sonner@0.4.2:
-    resolution: {integrity: sha512-8+Xv36Aqemzc7PoDto9T2/euBNETYfgCN1yqefGzV2PmIxjssjo2qS5Qjtmhdn9XtoDWL5hGjHSc+qx5ze48sA==}
+  /vue-sonner@0.3.3:
+    resolution: {integrity: sha512-lcLvlHJIRzVN1rV92yfvHYajeysbG1zGDQVzvnI+yFcbWW7QyinVoJTs79dnk8TrhPzuKUdWeoEMUBSOallEBg==}
     dev: false
 
   /vue-template-compiler@2.7.14:
