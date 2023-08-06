@@ -22,10 +22,10 @@ function onClick(position: (typeof positions)[number]) {
     action: {
       label: 'Close',
       buttonProps: {
-        color: 'pink'
+        color: 'pink',
       },
-      onClick() {}
-    }
+      onClick() {},
+    },
   })
 }
 </script>
