@@ -13,7 +13,8 @@ defineEmits(['closeToast'])
 <template>
   <VCard class="card-snackbar" v-bind="cardProps">
     <div :class="{ 'd-flex flex-no-wrap justify-space-between': !vertical }">
-      <VCardText v-bind="cardTextProps">
+      <component :is="customCardTextComponent" v-if="customCardTextComponent" />
+      <VCardText v-else v-bind="cardTextProps">
         <template v-if="description">
           <div class="pb-1">
             {{ text }}
@@ -26,7 +27,8 @@ defineEmits(['closeToast'])
           {{ text }}
         </template>
       </VCardText>
-      <VCardActions v-if="action" v-bind="cardActionsProps">
+      <component :is="customCardActionComponent" v-if="customCardActionComponent" />
+      <VCardActions v-else-if="action" v-bind="cardActionsProps">
         <VSpacer />
         <VBtn
           v-bind="action.buttonProps"
