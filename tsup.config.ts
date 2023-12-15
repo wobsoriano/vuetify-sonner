@@ -3,15 +3,12 @@ import vuePlugin from 'unplugin-vue/esbuild'
 
 export default defineConfig({
   entry: ['src/index.ts'],
-  format: ['cjs', 'esm'],
+  format: ['cjs', 'esm', 'iife'],
+  globalName: 'VuetifySonner',
+  sourcemap: true,
   splitting: false,
   clean: true,
   external: [/vuetify/],
   dts: false,
-  outExtension({ format }) {
-    return {
-      js: format === 'esm' ? '.mjs' : '.cjs',
-    }
-  },
   esbuildPlugins: [vuePlugin()],
 })
