@@ -19,6 +19,7 @@ Add `<VSonner />` to your app, it will be the place where all your toasts will b
 ```vue
 <script setup lang="ts">
 import { VSonner, toast } from 'vuetify-sonner'
+import 'vuetify-sonner-test/style.css' // to apply snackbar background and text color
 </script>
 
 <template>

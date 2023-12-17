@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { toast } from 'vuetify-sonner'
+import { toast } from '@/.'
 
 function showSonner() {
   toast('Hey, it\'s a snackbar')

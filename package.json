@@ -1,6 +1,5 @@
 {
   "name": "vuetify-sonner",
-  "type": "module",
   "version": "0.3.5",
   "packageManager": "pnpm@8.12.1",
   "description": "Stackable toast component for Vuetify.",
@@ -23,24 +22,22 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "import": "./dist/vuetify-sonner.mjs",
+      "require": "./dist/vuetify-sonner.umd.js"
     },
-    "./dist/*.css": {
-      "import": "./dist/*.css",
-      "require": "./dist/*.css"
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
     }
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
+  "main": "./dist/vuetify-sonner.umd.js",
+  "module": "./dist/vuetify-sonner.mjs",
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
       "*": [
-        "*",
-        "dist/*",
-        "dist/*.d.ts",
-        "dist/*/index.d.ts"
+        "./dist/*",
+        "./*"
       ]
     }
   },
@@ -48,11 +45,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup --onSuccess \"pnpm build:dts\"",
-    "build:dts": "vue-tsc --declaration --emitDeclarationOnly",
-    "dev": "vite serve dev",
-    "dev:build": "vite build dev",
-    "dev:preview": "vite preview dev",
+    "build": "vue-tsc --noEmit && vite build --mode lib",
+    "dev": "vite serve",
+    "dev:build": "vite build",
+    "dev:preview": "vite preview",
     "lint": "eslint .",
     "prepublishOnly": "pnpm build",
     "release": "bumpp && npm publish"
@@ -71,13 +67,12 @@
     "@vitejs/plugin-vue": "^4.5.2",
     "bumpp": "^9.2.1",
     "eslint": "^8.56.0",
-    "mkdist": "^1.4.0",
     "roboto-fontface": "^0.10.0",
     "sass": "^1.69.5",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3",
-    "unplugin-vue": "^4.5.2",
     "vite": "^5.0.10",
+    "vite-plugin-dts": "^3.6.4",
     "vite-plugin-vuetify": "^2.0.1",
     "vue": "^3.3.11",
     "vue-tsc": "^1.8.25",

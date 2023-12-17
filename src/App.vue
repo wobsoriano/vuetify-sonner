@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { VSonner } from 'vuetify-sonner'
 import { ref } from 'vue'
 import type { Position as PositionType } from 'vue-sonner/lib/types'
 import Hero from './Hero.vue'
 import Position from './Position.vue'
 import Expand from './Expand.vue'
+import { VSonner } from '@/.'
 
 const position = ref<PositionType>('bottom-center')
 const expand = ref(false)
