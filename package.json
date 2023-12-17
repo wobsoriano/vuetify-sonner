@@ -23,18 +23,16 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     },
     "./dist/*.css": {
       "import": "./dist/*.css",
       "require": "./dist/*.css"
     }
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "unpkg": "dist/index.global.js",
-  "jsdelivr": "dist/index.global.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
@@ -48,8 +46,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup --onSuccess \"pnpm build:dts\"",
-    "build:dts": "vue-tsc --declaration --emitDeclarationOnly",
+    "build": "unbuild",
     "dev": "vite serve dev",
     "dev:build": "vite build dev",
     "dev:preview": "vite preview dev",
@@ -73,9 +70,8 @@
     "eslint": "^8.56.0",
     "roboto-fontface": "^0.10.0",
     "sass": "^1.69.5",
-    "tsup": "^8.0.1",
     "typescript": "^5.3.3",
-    "unplugin-vue": "^4.5.2",
+    "unbuild": "^2.0.0",
     "vite": "^5.0.10",
     "vite-plugin-vuetify": "^2.0.1",
     "vue": "^3.3.11",
