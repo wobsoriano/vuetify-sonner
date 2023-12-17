@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { toast } from 'vuetify-sonner'
+import { toast } from '@/.'
 
 const snackbar = ref(false)
 </script>
