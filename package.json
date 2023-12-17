@@ -68,6 +68,7 @@
     "@vitejs/plugin-vue": "^4.5.2",
     "bumpp": "^9.2.1",
     "eslint": "^8.56.0",
+    "mkdist": "^1.4.0",
     "roboto-fontface": "^0.10.0",
     "sass": "^1.69.5",
     "typescript": "^5.3.3",

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { Toaster } from 'vue-sonner'
-import type { ToasterProps } from 'vue-sonner/lib/Toaster.vue'
+import { Toaster, type ToasterProps } from 'vue-sonner'
 
 type Props = Omit<ToasterProps, 'richColors' | 'theme' | 'closeButton' | 'className' | 'style'>
 

@@ -28,6 +28,9 @@ devDependencies:
   eslint:
     specifier: ^8.56.0
     version: 8.56.0
+  mkdist:
+    specifier: ^1.4.0
+    version: 1.4.0(sass@1.69.5)(typescript@5.3.3)
   roboto-fontface:
     specifier: ^0.10.0
     version: 0.10.0
