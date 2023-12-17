@@ -1,6 +1,6 @@
 {
   "name": "vuetify-sonner",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "packageManager": "pnpm@8.12.1",
   "description": "Stackable toast component for Vuetify.",
   "author": "Robert Soriano <sorianorobertc@gmail.com>",
