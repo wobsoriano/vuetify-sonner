@@ -24,21 +24,23 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "require": "./dist/index.cjs"
     },
     "./dist/*.css": {
       "import": "./dist/*.css",
       "require": "./dist/*.css"
     }
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
       "*": [
-        "./dist/*",
-        "./*"
+        "*",
+        "dist/*",
+        "dist/*.d.ts",
+        "dist/*/index.d.ts"
       ]
     }
   },
@@ -46,7 +48,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
+    "build": "tsup --onSuccess \"pnpm build:dts\"",
+    "build:dts": "vue-tsc --declaration --emitDeclarationOnly",
     "dev": "vite serve dev",
     "dev:build": "vite build dev",
     "dev:preview": "vite preview dev",
@@ -71,8 +74,9 @@
     "mkdist": "^1.4.0",
     "roboto-fontface": "^0.10.0",
     "sass": "^1.69.5",
+    "tsup": "^8.0.1",
     "typescript": "^5.3.3",
-    "unbuild": "^2.0.0",
+    "unplugin-vue": "^4.5.2",
     "vite": "^5.0.10",
     "vite-plugin-vuetify": "^2.0.1",
     "vue": "^3.3.11",
