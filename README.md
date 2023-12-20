@@ -20,7 +20,7 @@ Add `<VSonner />` to your app, it will be the place where all your toasts will b
 ```vue
 <script setup lang="ts">
 import { VSonner, toast } from 'vuetify-sonner'
-// Request for snackbar background and text color
+// Required for snackbar background and text color
 import 'vuetify-sonner/style.css'
 </script>
 
