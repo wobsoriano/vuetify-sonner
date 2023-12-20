@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => {
         fileName: 'vuetify-sonner',
       },
       rollupOptions: {
-        external: ['vue', /vuetify\/.+/, 'vue-sonner'],
+        external: ['vue', 'vuetify', /vuetify\/.+/, 'vue-sonner'],
         output: {
           exports: 'named',
           globals: {
