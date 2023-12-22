@@ -15,12 +15,8 @@ defineEmits(['closeToast'])
     <div :class="{ 'd-flex flex-no-wrap justify-space-between': !vertical }">
       <VCardText v-bind="cardTextProps">
         <template v-if="description">
-          <div class="pb-1">
-            {{ text }}
-          </div>
-          <p class="font-weight-light">
-            {{ description }}
-          </p>
+          <div class="pb-1">{{ text }}</div>
+          <p class="font-weight-light" v-html="description"></p>
         </template>
         <template v-else>
           {{ text }}
