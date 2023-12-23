@@ -1,5 +1,6 @@
 {
   "name": "vuetify-sonner",
+  "type": "module",
   "version": "0.3.7",
   "packageManager": "pnpm@8.12.1",
   "description": "Stackable toast component for Vuetify.",
@@ -22,16 +23,16 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/vuetify-sonner.mjs",
-      "require": "./dist/vuetify-sonner.umd.js"
+      "import": "./dist/vuetify-sonner.js",
+      "require": "./dist/vuetify-sonner.umd.cjs"
     },
     "./style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
     }
   },
-  "main": "./dist/vuetify-sonner.umd.js",
-  "module": "./dist/vuetify-sonner.mjs",
+  "main": "./dist/vuetify-sonner.umd.cjs",
+  "module": "./dist/vuetify-sonner.js",
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
