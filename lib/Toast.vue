@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { VBtn, VCard, VCardActions, VCardText, VSpacer } from 'vuetify/components'
+import { VBtn, VCard, VCardActions, VCardText, VSpacer, VIcon } from 'vuetify/components'
 import type { ToastProps } from './types'
 
 withDefaults(defineProps<ToastProps>(), {
@@ -8,16 +8,21 @@ withDefaults(defineProps<ToastProps>(), {
 })
 
 defineEmits(['closeToast'])
+
+defineOptions({
+  inheritAttrs: false,
+})
 </script>
 
 <template>
   <VCard class="card-snackbar" v-bind="cardProps">
     <div :class="{ 'd-flex flex-no-wrap justify-space-between': !vertical }">
-      <VCardText v-bind="cardTextProps">
-        <template v-if="description">
+      <VCardText v-bind="cardTextProps" :class="{ 'd-flex align-center': prependIcon }">
+        <VIcon v-if="prependIcon" class="mr-2" :icon="prependIcon" v-bind="prependIconProps" />
+        <div v-if="description">
           <div class="pb-1">{{ text }}</div>
           <p class="font-weight-light" v-html="description"></p>
-        </template>
+        </div>
         <template v-else>
           {{ text }}
         </template>
