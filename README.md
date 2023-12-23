@@ -98,6 +98,10 @@ toast('Event has been created', {
   },
   cardActionsProps: {
     // v-card-actions props
+  },
+  prependIcon: 'mdi-check',
+  prependIconProps: {
+    // v-icon props
   }
 })
 ```
