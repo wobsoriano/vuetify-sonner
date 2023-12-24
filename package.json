@@ -46,7 +46,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "vue-tsc --noEmit && vite build --mode lib",
+    "build": "rimraf dist && vue-tsc --noEmit && vite build --mode lib && rimraf dist/vite.svg",
     "dev": "vite serve",
     "dev:build": "vite build",
     "dev:preview": "vite preview",
@@ -68,6 +68,7 @@
     "@vitejs/plugin-vue": "^4.5.2",
     "bumpp": "^9.2.1",
     "eslint": "^8.56.0",
+    "rimraf": "^5.0.5",
     "roboto-fontface": "^0.10.0",
     "sass": "^1.69.5",
     "tsup": "^8.0.1",
