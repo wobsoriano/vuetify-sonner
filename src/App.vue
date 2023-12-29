@@ -6,7 +6,7 @@ import Position from './Position.vue'
 import Expand from './Expand.vue'
 import { VSonner } from '@/.'
 
-const position = ref<PositionType>('bottom-center')
+const position = ref<PositionType>('bottom-right')
 const expand = ref(false)
 </script>
 
