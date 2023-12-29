@@ -2,7 +2,7 @@
   "name": "vuetify-sonner",
   "type": "module",
   "version": "0.3.9",
-  "packageManager": "pnpm@8.12.1",
+  "packageManager": "pnpm@8.13.1",
   "description": "Stackable toast component for Vuetify.",
   "author": "Robert Soriano <sorianorobertc@gmail.com>",
   "license": "MIT",
@@ -62,22 +62,22 @@
     "vue-sonner": "^1.0.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.4.6",
-    "@mdi/font": "^7.3.67",
-    "@types/node": "^20.10.4",
-    "@vitejs/plugin-vue": "^4.5.2",
+    "@antfu/eslint-config": "^2.6.1",
+    "@mdi/font": "^7.4.47",
+    "@types/node": "^20.10.5",
+    "@vitejs/plugin-vue": "^5.0.1",
     "bumpp": "^9.2.1",
     "eslint": "^8.56.0",
     "rimraf": "^5.0.5",
     "roboto-fontface": "^0.10.0",
-    "sass": "^1.69.5",
+    "sass": "^1.69.6",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3",
     "vite": "^5.0.10",
-    "vite-plugin-dts": "^3.6.4",
+    "vite-plugin-dts": "^3.7.0",
     "vite-plugin-vuetify": "^2.0.1",
-    "vue": "^3.3.11",
-    "vue-tsc": "^1.8.25",
-    "vuetify": "^3.4.7"
+    "vue": "^3.4.0",
+    "vue-tsc": "^1.8.27",
+    "vuetify": "^3.4.9"
   }
 }
