@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import type { Position as PositionType } from 'vue-sonner/lib/types'
 import Hero from './Hero.vue'
 import Position from './Position.vue'
+import Types from './Types.vue'
 import Expand from './Expand.vue'
 import { VSonner } from '@/.'
 
@@ -19,6 +20,7 @@ const expand = ref(false)
         <div class="content">
           <Position v-model:position="position" />
           <Expand v-model:expand="expand" />
+          <Types />
         </div>
       </div>
     </v-main>
