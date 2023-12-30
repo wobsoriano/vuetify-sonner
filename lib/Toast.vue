@@ -46,8 +46,8 @@ defineEmits(['closeToast'])
 
 <style scoped lang="scss">
 .card-snackbar {
-  background: rgb(var(--v-theme-surface-variant)) !important;
-  color: rgb(var(--v-theme-on-surface-variant)) !important;
+  background: rgb(var(--v-theme-surface-variant));
+  color: rgb(var(--v-theme-on-surface-variant));
   max-width: 672px !important;
   min-width: 344px !important;
   min-height: 48px !important;
