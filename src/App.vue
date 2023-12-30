@@ -12,7 +12,7 @@ const expand = ref(false)
 </script>
 
 <template>
-  <v-app theme="dark">
+  <v-app>
     <v-main>
       <VSonner :position="position" :expand="expand" />
       <div class="container">
