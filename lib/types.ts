@@ -5,7 +5,7 @@ type ExtractProps<TComponent> =
   TComponent extends new () => {
     $props: infer P
   }
-    ? Omit<P, keyof VNodeProps | keyof AllowedComponentProps>
+    ? Omit<P, keyof VNodeProps>
     : never
 
 export interface ToastProps {
