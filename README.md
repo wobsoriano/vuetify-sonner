@@ -67,7 +67,7 @@ toast('Event has been created', {
 
 ## Customization
 
-Behind the scenes, the toast component use Vuetify [Cards](https://vuetifyjs.com/en/components/cards/) since the snackbar component has it's own overlay logic.
+Behind the scenes, the toast component uses Vuetify [Cards](https://vuetifyjs.com/en/components/cards/), as the snackbar component has its own overlay logic.
 
 ### Position
 
