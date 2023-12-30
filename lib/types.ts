@@ -1,4 +1,4 @@
-import type { AllowedComponentProps, VNodeProps } from 'vue'
+import type { VNodeProps } from 'vue'
 import type { VBtn, VCard, VCardActions, VCardText, VIcon } from 'vuetify/components'
 
 type ExtractProps<TComponent> =
