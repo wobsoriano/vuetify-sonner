@@ -45,9 +45,10 @@ defineEmits(['closeToast'])
 </template>
 
 <style scoped lang="scss">
+@use 'vuetify/settings';
 .card-snackbar {
-  background: rgb(var(--v-theme-surface-variant));
-  color: rgb(var(--v-theme-on-surface-variant));
+  background: settings.$snackbar-background;
+  color: settings.$snackbar-color;
   max-width: 672px !important;
   min-width: 344px !important;
   min-height: 48px !important;
