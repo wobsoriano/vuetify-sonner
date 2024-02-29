@@ -5,7 +5,7 @@ import VSonner from './VSonner.vue'
 import Toast from './Toast.vue'
 import type { ToastProps } from './types'
 
-type Options = Omit<ToastProps, 'text'> & Pick<ExternalToast, 'duration' | 'onAutoClose' | 'onDismiss' | 'id' | 'important' | 'promise'>
+type Options = Omit<ToastProps, 'text'> & Pick<ExternalToast, 'duration' | 'onAutoClose' | 'onDismiss' | 'id' | 'important'>
 
 function toastFunction(text: string, options?: Options) {
   const { description, action, ...rest } = options || {}
@@ -16,6 +16,7 @@ function toastFunction(text: string, options?: Options) {
     text,
   })), {
     ...rest,
+    unstyled: true,
   })
 }
 
