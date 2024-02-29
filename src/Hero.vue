@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { toast } from '@/.'
-
-const snackbar = ref(false)
 </script>
 
 <template>
@@ -32,18 +30,6 @@ const snackbar = ref(false)
       </VBtn>
     </div>
   </div>
-  <v-snackbar v-model="snackbar">
-    Stackable toast component for Vuetify.
-    <template #actions>
-      <v-btn
-        color="pink"
-        variant="text"
-        @click="snackbar = false"
-      >
-        Close
-      </v-btn>
-    </template>
-  </v-snackbar>
 </template>
 
 <style>
