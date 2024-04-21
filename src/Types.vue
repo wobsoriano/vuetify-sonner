@@ -10,7 +10,7 @@ import { toast } from '@/.'
       <v-btn @click="toast('Event has been created')">
         Default
       </v-btn>
-      <v-btn @click="toast.success('Event has been created')">
+      <v-btn @click="toast.success('Something happened successfully')">
         Success
       </v-btn>
       <v-btn @click="toast.info('Be at the area 10 minutes before the time')">
@@ -21,6 +21,12 @@ import { toast } from '@/.'
       </v-btn>
       <v-btn @click="toast.error('Event has not been created')">
         Error
+      </v-btn>
+      <v-btn @click="toast.primary('Just a notification with primary color 💅')">
+        Primary
+      </v-btn>
+      <v-btn @click="toast.secondary('Another notification with secondary color 🎨', {prependIcon: 'mdi-thumb-up'})">
+        Secondary
       </v-btn>
     </div>
   </div>

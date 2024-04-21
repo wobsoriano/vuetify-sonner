@@ -9,6 +9,7 @@ const emit = defineEmits(['update:expand'])
 function onClick(value: boolean) {
   toast('Event has been created', {
     description: 'Monday, January 3rd at 6:00pm',
+    prependIcon: '$vuetify',
   })
   emit('update:expand', value)
 }
