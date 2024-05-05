@@ -11,7 +11,7 @@ function toastFunction(text: string, options?: Options) {
   const { description, action, ...rest } = options || {}
   return toastOriginal.custom(markRaw(h(Toast, {
     ...rest,
-    progressBar: options?.progressBar ?? true,
+    progressBar: options?.progressBar ?? false,
     progressDuration: options?.duration ?? 5000,
     progressBarProps: {
       ...options?.progressBarProps,

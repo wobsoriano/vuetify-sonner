@@ -7,7 +7,7 @@ import { toast } from '@/.'
     <h1 class="text-h3">
       Vuetify Sonner
     </h1>
-    <p style="margin-top: 0; fontSize: 18px;">
+    <p style="margin-top: 0; font-size: 18px;">
       Stackable toast component for Vuetify.
     </p>
     <div class="buttons">

@@ -10,7 +10,7 @@ defineOptions({
 
 withDefaults(defineProps<ToastProps>(), {
   vertical: false,
-  progressBar: true,
+  progressBar: false,
   progressDuration: 5000,
   cardActionsProps: () => ({}),
 })
