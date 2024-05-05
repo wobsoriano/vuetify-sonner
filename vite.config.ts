@@ -13,19 +13,27 @@ export default defineConfig(({ mode }) => {
     userConfig.build = {
       lib: {
         entry: path.resolve(__dirname, 'lib/index.ts'),
-        name: 'vuetify-sonner',
+        name: 'VuetifySonner',
         fileName: 'vuetify-sonner',
       },
+      outDir: 'dist',
+      emptyOutDir: true,
+      cssCodeSplit: false,
+      sourcemap: true,
       rollupOptions: {
         external: ['vue', 'vuetify', /vuetify\/.+/, 'vue-sonner'],
-        output: {
-          exports: 'named',
-          globals: {
-            vue: 'Vue',
+        output: [
+          {
+            format: 'cjs',
+            entryFileNames: `vuetify-sonner.cjs`,
           },
-        },
+          {
+            format: 'es',
+            entryFileNames: `vuetify-sonner.js`,
+            preserveModules: false,
+          },
+        ],
       },
-      emptyOutDir: false,
     }
   }
 

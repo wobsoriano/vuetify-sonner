@@ -3,17 +3,16 @@
   "compilerOptions": {
     "baseUrl": "./",
     "moduleResolution": "Node",
-    "paths": {
-      "@/*": ["lib/*"],
-      "~/*": ["./src/*"]
-    }
+    "declaration": true,
+    "declarationDir": "./temp",
+    "emitDeclarationOnly": true,
+    "noEmit": false,
+    "outDir": "dist"
   },
-  "references": [{ "path": "./tsconfig.node.json" }],
+  "vueCompilerOptions": {
+    "skipTemplateCodegen": true
+  },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
     "lib/**/*.ts",
     "lib/**/*.d.ts",
     "lib/**/*.tsx",
