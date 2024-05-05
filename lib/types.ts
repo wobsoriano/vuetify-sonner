@@ -1,5 +1,5 @@
 import type { VNodeProps } from 'vue'
-import type { VBtn, VCard, VCardActions, VCardText, VIcon } from 'vuetify/components'
+import type { VBtn, VCard, VCardActions, VCardText, VIcon, VAvatar, VProgressLinear } from 'vuetify/components'
 
 type ExtractProps<TComponent> =
   TComponent extends new () => {
@@ -22,4 +22,12 @@ export interface ToastProps {
   }
   prependIcon?: string
   prependIconProps?: ExtractProps<typeof VIcon>
+  avatar?: string
+  multipleAvatars?: string[]
+  avatarProps?: ExtractProps<typeof VAvatar>
+  progressBar?: boolean
+  reverseProgressBar?: boolean
+  progressDuration?: number
+  progressBarProps?: ExtractProps<typeof VProgressLinear>
+  loading?: boolean
 }

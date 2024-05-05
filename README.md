@@ -71,7 +71,7 @@ Behind the scenes, the toast component uses Vuetify [Cards](https://vuetifyjs.co
 
 ### Position
 
-You can change the position through the `position` prop on the <VSonner /> component. Default is `bottom-center`.
+You can change the position through the `position` prop on the `<VSonner />` component. Default is `bottom-center`.
 
 ```vue
 <VSonner position="top-center" />
@@ -85,13 +85,15 @@ Toasts can also be expanded by default through the `expand` prop. You can also c
 <VSonner expand :visible-toasts="9" />
 ```
 
-### Styling a toast
+### Toast Options
 
 ```js
 toast('Event has been created', {
+  description: 'Some more context of the notification' // subtitle of the snackbar
   cardProps: {
     color: 'success',
     class: 'my-toast',
+    // v-card props
   },
   cardTextProps: {
     // v-card-text props
@@ -102,6 +104,22 @@ toast('Event has been created', {
   prependIcon: 'mdi-check-circle',
   prependIconProps: {
     // v-icon props
+  },
+  progressBar: boolean, // show or hide countdown progress bar
+  progressBarProps: {
+    // v-progress-linear props
+  },
+  reverseProgressBar: boolean // changes progress bar direction
+  loading: boolean, // makes progressbar indeterminate
+  avatar: 'https://url.to/my/image.jpg' // avatar image url,
+  multipleAvatars: [
+    'https://url.to/image/1.jpg',
+    'https://url.to/image/2.jpg',
+    'https://url.to/image/3.jpg'
+    // will display first 5 images
+  ],
+  avatarProps: {
+    // v-avatar props
   }
 })
 ```
@@ -161,6 +179,28 @@ You can focus on the toast area by pressing ⌥/alt + T. You can override it by 
 ```vue
 <VSonner :hotkey="['KeyC']" />
 ```
+
+### Use Underlying `Vue-Sonner`
+
+`vuetify-sonner`, as a wrapper over the `vue-sonner` library, grants access to all the underlying methods and properties of `vue-sonner` by using the `toast.toastOriginal` property, e.g.
+
+```js
+// Using Vue-Sonners Promise toast
+import { toast } from 'vuetify-sonner'
+
+const promise = () => new Promise((resolve) => setTimeout(resolve, 2000));
+
+toast.toastOriginal
+  .promise(promise, {
+    loading: 'Loading...', 
+    success: (data) => {
+      return `${data} toast has been added`;
+    },
+    error: (data: any) => 'Error',
+  });
+```
+
+See [here for more on using vue-sonner](https://vue-sonner.vercel.app/)
 
 ## Nuxt Usage
 
