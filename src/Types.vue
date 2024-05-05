@@ -25,7 +25,7 @@ import { toast } from '@/.'
       <v-btn @click="toast.primary('Just a notification with primary color 💅')">
         Primary
       </v-btn>
-      <v-btn @click="toast.secondary('Another notification with secondary color 🎨', {prependIcon: 'mdi-thumb-up'})">
+      <v-btn @click="toast.secondary('Another notification with secondary color 🎨', { prependIcon: 'mdi-thumb-up' })">
         Secondary
       </v-btn>
     </div>

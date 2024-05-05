@@ -1,5 +1,5 @@
 import type { VNodeProps } from 'vue'
-import type { VBtn, VCard, VCardActions, VCardText, VIcon, VAvatar, VProgressLinear } from 'vuetify/components'
+import type { VAvatar, VBtn, VCard, VCardActions, VCardText, VIcon, VProgressLinear } from 'vuetify/components'
 
 type ExtractProps<TComponent> =
   TComponent extends new () => {

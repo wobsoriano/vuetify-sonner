@@ -89,7 +89,7 @@ Toasts can also be expanded by default through the `expand` prop. You can also c
 
 ```js
 toast('Event has been created', {
-  description: 'Some more context of the notification' // subtitle of the snackbar
+  description: 'Some more context of the notification', // subtitle of the snackbar
   cardProps: {
     color: 'success',
     class: 'my-toast',
@@ -109,9 +109,9 @@ toast('Event has been created', {
   progressBarProps: {
     // v-progress-linear props
   },
-  reverseProgressBar: boolean // changes progress bar direction
+  reverseProgressBar: boolean, // changes progress bar direction
   loading: boolean, // makes progressbar indeterminate
-  avatar: 'https://url.to/my/image.jpg' // avatar image url,
+  avatar: 'https://url.to/my/image.jpg', // avatar image url,
   multipleAvatars: [
     'https://url.to/image/1.jpg',
     'https://url.to/image/2.jpg',
@@ -188,16 +188,16 @@ You can focus on the toast area by pressing ⌥/alt + T. You can override it by 
 // Using Vue-Sonners Promise toast
 import { toast } from 'vuetify-sonner'
 
-const promise = () => new Promise((resolve) => setTimeout(resolve, 2000));
+const promise = () => new Promise(resolve => setTimeout(resolve, 2000))
 
 toast.toastOriginal
   .promise(promise, {
-    loading: 'Loading...', 
+    loading: 'Loading...',
     success: (data) => {
-      return `${data} toast has been added`;
+      return `${data} toast has been added`
     },
     error: (data: any) => 'Error',
-  });
+  })
 ```
 
 See [here for more on using vue-sonner](https://vue-sonner.vercel.app/)

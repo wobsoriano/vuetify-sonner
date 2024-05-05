@@ -1,54 +1,59 @@
 <script setup lang="ts">
-  import { VProgressLinear } from 'vuetify/components'
-  import type { ExternalToast } from 'vue-sonner/lib/types'
-  import type { ToastProps } from './types'
-  import { onMounted, ref, watch, onBeforeUnmount } from 'vue';
+import { VProgressLinear } from 'vuetify/components'
+import type { ExternalToast } from 'vue-sonner/lib/types'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import type { ToastProps } from './types'
 
-  type ProgressProps = Pick<ExternalToast, 'duration'> 
-    & Pick<ToastProps, 'progressBarProps'> 
-    & {isPaused: boolean, reverseProgressBar: boolean}
-  
-  const props = withDefaults(defineProps<ProgressProps>(), {
-    duration: 5000,
-    isPaused: false,
-    reverseProgressBar: false,
-  })
+  type ProgressProps = Pick<ExternalToast, 'duration'>
+    & Pick<ToastProps, 'progressBarProps'>
+    & { isPaused: boolean, reverseProgressBar: boolean }
 
-  let value = props.reverseProgressBar ? ref(0) : ref(5000)
+const props = withDefaults(defineProps<ProgressProps>(), {
+  duration: 5000,
+  isPaused: false,
+  reverseProgressBar: false,
+})
 
-  let interval: ReturnType<typeof setInterval>
+const value = props.reverseProgressBar ? ref(0) : ref(5000)
 
-  watch(() => props.isPaused, (newValue) => {
-    if(!newValue && !props.progressBarProps?.indeterminate) syncProgressBar()
-  })
+let interval: ReturnType<typeof setInterval>
 
-  const syncProgressBar = () => {
-    interval = setTimeout(() => {
-      if(props.isPaused) return;
-      props.reverseProgressBar ? value.value += 120 : value.value -= 120
-      if (value.value <= 0 && !props.reverseProgressBar){
-        value.value = 0
-        clearInterval(interval)
-      } else if (value.value >= props.duration && props.reverseProgressBar) {
-        value.value = props.duration
-        clearInterval(interval)
-      } else {
-        syncProgressBar()
-      }
-    }, 100);
-  }
+watch(() => props.isPaused, (newValue) => {
+  if (!newValue && !props.progressBarProps?.indeterminate)
+    syncProgressBar()
+})
 
-  onMounted(() => {
-    if(!props.progressBarProps?.indeterminate){
-      value.value = props.reverseProgressBar ? 0 : props.duration
+function syncProgressBar() {
+  interval = setTimeout(() => {
+    if (props.isPaused)
+      return
+    props.reverseProgressBar ? value.value += 120 : value.value -= 120
+    if (value.value <= 0 && !props.reverseProgressBar) {
+      value.value = 0
+      clearInterval(interval)
+    }
+    else if (value.value >= props.duration && props.reverseProgressBar) {
+      value.value = props.duration
+      clearInterval(interval)
+    }
+    else {
       syncProgressBar()
     }
-  })
+  }, 100)
+}
 
-  onBeforeUnmount (() => {
-    clearInterval(interval)
-  })
+onMounted(() => {
+  if (!props.progressBarProps?.indeterminate) {
+    value.value = props.reverseProgressBar ? 0 : props.duration
+    syncProgressBar()
+  }
+})
+
+onBeforeUnmount (() => {
+  clearInterval(interval)
+})
 </script>
+
 <template>
-  <VProgressLinear v-bind="props.progressBarProps" :model-value="Math.floor(100 * (value / props.duration))"></VProgressLinear>
+  <VProgressLinear v-bind="props.progressBarProps" :model-value="Math.floor(100 * (value / props.duration))" />
 </template>

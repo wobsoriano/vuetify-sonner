@@ -15,7 +15,7 @@ function toastFunction(text: string, options?: Options) {
     progressDuration: options?.duration ?? 5000,
     progressBarProps: {
       ...options?.progressBarProps,
-      indeterminate: options?.loading
+      indeterminate: options?.loading,
     },
     description,
     action,

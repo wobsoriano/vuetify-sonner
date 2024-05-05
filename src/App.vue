@@ -5,15 +5,14 @@ import Hero from './Hero.vue'
 import Position from './Position.vue'
 import Types from './Types.vue'
 import Expand from './Expand.vue'
-import { VSonner } from '@/.'
 import WithProgressBars from './WithProgressBars.vue'
 import WithAvatars from './WithAvatars.vue'
+import { VSonner } from '@/.'
 
 const position = ref<PositionType>('bottom-right')
 const expand = ref(false)
 const range = ref([2, 9])
 const maxToasts = ref(3)
-
 </script>
 
 <template>
@@ -30,12 +29,12 @@ const maxToasts = ref(3)
             :min="range[0]"
             :show-ticks="true"
             thumb-label="always"
-            
+
             :step="1"
             hint="Number of visible toasts at a time"
             persistent-hint
           >
-            <template v-slot:prepend>
+            <template #prepend>
               <v-text-field
                 v-model="range[0]"
                 density="compact"
@@ -44,9 +43,9 @@ const maxToasts = ref(3)
                 variant="outlined"
                 hide-details
                 single-line
-              ></v-text-field>
+              />
             </template>
-            <template v-slot:append>
+            <template #append>
               <v-text-field
                 v-model="range[1]"
                 density="compact"
@@ -55,7 +54,7 @@ const maxToasts = ref(3)
                 variant="outlined"
                 hide-details
                 single-line
-              ></v-text-field>
+              />
             </template>
           </v-slider>
           <Expand v-model:expand="expand" />
