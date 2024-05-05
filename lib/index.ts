@@ -1,9 +1,8 @@
 import { h, markRaw } from 'vue'
 import { toast as toastOriginal } from 'vue-sonner'
-import type { ExternalToast } from 'vue-sonner/lib/types'
+import type { ExternalToast, ToastProps } from './types'
 import VSonner from './VSonner.vue'
 import Toast from './Toast.vue'
-import type { ToastProps } from './types'
 
 type Options = Omit<ToastProps, 'text'> & Pick<ExternalToast, 'duration' | 'onAutoClose' | 'onDismiss' | 'id' | 'important'>
 

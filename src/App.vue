@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { Position as PositionType } from 'vue-sonner/lib/types'
 import Hero from './Hero.vue'
 import Position from './Position.vue'
 import Types from './Types.vue'
 import Expand from './Expand.vue'
 import WithProgressBars from './WithProgressBars.vue'
 import WithAvatars from './WithAvatars.vue'
+import type { Position as PositionType } from '@/types'
 import { VSonner } from '@/.'
 
 const position = ref<PositionType>('bottom-right')

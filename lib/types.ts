@@ -38,7 +38,7 @@ type ToastTypes = 'normal' | 'action' | 'success' | 'info' | 'warning' | 'error'
 
 type PromiseT<Data = any> = Promise<Data> | (() => Promise<Data>)
 
-type Position = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'top-center' | 'bottom-center'
+export type Position = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'top-center' | 'bottom-center'
 
 interface ToastClassnames {
   toast?: string
