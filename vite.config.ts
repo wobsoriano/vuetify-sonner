@@ -1,7 +1,6 @@
 import path from 'node:path'
 import type { UserConfig } from 'vite'
 import { defineConfig } from 'vite'
-import dts from 'vite-plugin-dts'
 import vue from '@vitejs/plugin-vue'
 import vuetify from 'vite-plugin-vuetify'
 
@@ -40,9 +39,6 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       vue(),
-      dts({
-        include: './lib',
-      }),
       vuetify({
         autoImport: true,
       }),
