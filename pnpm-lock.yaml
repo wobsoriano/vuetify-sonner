@@ -6,7 +6,7 @@ settings:
 
 dependencies:
   vue-sonner:
-    specifier: ^1.0.4
+    specifier: 1.0.4
     version: 1.0.4
 
 devDependencies:
