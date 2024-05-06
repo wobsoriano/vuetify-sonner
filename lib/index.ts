@@ -1,6 +1,6 @@
 import { h, markRaw } from 'vue'
-import { toast as toastOriginal } from 'vue-sonner'
-import type { ExternalToast, ToastProps } from './types'
+import { type ExternalToast, toast as toastOriginal } from 'vue-sonner'
+import type { ToastProps } from './types'
 import VSonner from './VSonner.vue'
 import Toast from './Toast.vue'
 

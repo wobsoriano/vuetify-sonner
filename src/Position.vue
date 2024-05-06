@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Position } from '@/types'
+import type { Position } from 'vue-sonner'
 import { toast } from '@/.'
 
 const props = defineProps<{

@@ -2,7 +2,7 @@
   "name": "vuetify-sonner",
   "type": "module",
   "version": "0.3.17",
-  "packageManager": "pnpm@8.15.4",
+  "packageManager": "pnpm@8.15.8",
   "description": "Stackable toast component for Vuetify.",
   "author": "Robert Soriano <sorianorobertc@gmail.com>",
   "license": "MIT",
@@ -22,31 +22,24 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/vuetify-sonner.d.ts",
       "import": "./dist/vuetify-sonner.js",
-      "require": "./dist/vuetify-sonner.umd.cjs"
+      "require": "./dist/vuetify-sonner.cjs"
     },
     "./style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
     }
   },
-  "main": "./dist/vuetify-sonner.umd.cjs",
+  "main": "./dist/vuetify-sonner.cjs",
   "module": "./dist/vuetify-sonner.js",
-  "types": "./dist/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./*"
-      ]
-    }
-  },
+  "types": "./dist/vuetify-sonner.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rimraf dist && vue-tsc --noEmit && vite build --mode lib && rimraf dist/vite.svg",
+    "build": "vite build --mode lib && rimraf dist/vite.svg && pnpm build:types",
+    "build:types": "vue-tsc -p tsconfig.build.json && api-extractor run",
     "dev": "vite serve",
     "dev:build": "vite build",
     "dev:preview": "vite preview",
@@ -62,22 +55,28 @@
     "vue-sonner": "1.1.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.4",
+    "@antfu/eslint-config": "^2.16.1",
     "@mdi/font": "^7.4.47",
-    "@types/node": "^20.11.24",
+    "@microsoft/api-extractor": "^7.43.1",
+    "@types/node": "^20.12.8",
     "@vitejs/plugin-vue": "^5.0.4",
-    "bumpp": "^9.3.0",
-    "eslint": "^8.57.0",
+    "@vue/tsconfig": "^0.5.1",
+    "bumpp": "^9.4.1",
+    "eslint": "^9.2.0",
     "rimraf": "^5.0.5",
     "roboto-fontface": "^0.10.0",
-    "sass": "^1.71.1",
+    "sass": "^1.76.0",
     "tsup": "^8.0.2",
-    "typescript": "^5.3.3",
-    "vite": "^5.1.4",
-    "vite-plugin-dts": "^3.7.3",
-    "vite-plugin-vuetify": "^2.0.2",
-    "vue": "^3.4.21",
-    "vue-tsc": "^1.8.27",
-    "vuetify": "^3.5.6"
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "vite-plugin-vuetify": "^2.0.3",
+    "vue": "^3.4.26",
+    "vue-tsc": "^2.0.16",
+    "vuetify": "^3.6.3"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "vue-sonner@1.1.2": "patches/vue-sonner@1.1.2.patch"
+    }
   }
 }
