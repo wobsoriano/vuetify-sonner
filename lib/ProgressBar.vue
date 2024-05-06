@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { VProgressLinear } from 'vuetify/components'
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import type { ExternalToast } from 'vue-sonner'
-import type { ToastProps } from './types'
+import type { ExternalToast, ToastProps } from './types'
 
 type ProgressProps = Pick<ExternalToast, 'duration'>
   & Pick<ToastProps, 'progressBarProps'>

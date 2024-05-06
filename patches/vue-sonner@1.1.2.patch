@@ -1,24 +1,7 @@
 diff --git a/lib/vue-sonner.d.ts b/lib/vue-sonner.d.ts
-index 73ce85452c54ef186eece1bd4c2521b513fe29ae..ed2839d63d4e072d5acdd94d2d61862528006531 100644
+index 73ce85452c54ef186eece1bd4c2521b513fe29ae..f893242c6b03e8ada974736b71bca1e5b8595bf7 100644
 --- a/lib/vue-sonner.d.ts
 +++ b/lib/vue-sonner.d.ts
-@@ -30,14 +30,14 @@ declare type __VLS_WithDefaults<P, D> = {
- 
- declare type CnFunction = (...classes: Array<string | undefined>) => string;
- 
--declare type ExternalToast<T extends Component = Component> = Omit<ToastT<T>, 'id' | 'type' | 'title' | 'promise' | 'delete'> & {
-+export declare type ExternalToast<T extends Component = Component> = Omit<ToastT<T>, 'id' | 'type' | 'title' | 'promise' | 'delete'> & {
-     id?: number | string;
- };
- 
- declare const plugin: Plugin_2;
- export default plugin;
- 
--declare type Position = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'top-center' | 'bottom-center';
-+export declare type Position = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'top-center' | 'bottom-center';
- 
- declare type PromiseData<ToastData = any> = ExternalToast & {
-     loading?: string | Component;
 @@ -63,7 +63,7 @@ export declare const toast: ((message: string | Component, data?: ExternalToast)
      loading: (message: string | Component, data?: ExternalToast) => string | number;
  };
