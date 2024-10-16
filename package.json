@@ -40,7 +40,7 @@
   "scripts": {
     "build": "vite build --mode lib && rimraf dist/vite.svg && pnpm build:types",
     "build:types": "vue-tsc -p tsconfig.build.json && api-extractor run",
-    "dev": "vite serve",
+    "dev": "vite",
     "dev:build": "vite build",
     "dev:preview": "vite preview",
     "lint": "eslint .",
@@ -52,31 +52,26 @@
     "vuetify": "^3.3.0"
   },
   "dependencies": {
-    "vue-sonner": "1.1.2"
+    "vue-sonner": "^1.2.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.16.1",
     "@mdi/font": "^7.4.47",
-    "@microsoft/api-extractor": "^7.43.1",
+    "@microsoft/api-extractor": "^7.47.10",
     "@types/node": "^20.12.8",
-    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue": "^5.1.4",
     "@vue/tsconfig": "^0.5.1",
     "bumpp": "^9.4.1",
     "eslint": "^9.2.0",
     "rimraf": "^5.0.5",
     "roboto-fontface": "^0.10.0",
-    "sass": "^1.76.0",
-    "tsup": "^8.0.2",
-    "typescript": "^5.4.5",
-    "vite": "^5.2.11",
-    "vite-plugin-vuetify": "^2.0.3",
-    "vue": "^3.4.26",
-    "vue-tsc": "^2.0.16",
-    "vuetify": "^3.6.3"
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "vue-sonner@1.1.2": "patches/vue-sonner@1.1.2.patch"
-    }
+    "sass": "^1.79.5",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.9",
+    "vite-plugin-vuetify": "^2.0.4",
+    "vue": "^3.5.12",
+    "vue-tsc": "^2.1.6",
+    "vuetify": "^3.7.2"
   }
 }
