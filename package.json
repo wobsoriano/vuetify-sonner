@@ -52,6 +52,7 @@
     "vuetify": "^3.3.0"
   },
   "dependencies": {
+    "vue-component-type-helpers": "^2.1.8",
     "vue-sonner": "^1.2.3"
   },
   "devDependencies": {

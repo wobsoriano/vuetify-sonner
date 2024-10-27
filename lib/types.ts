@@ -1,35 +1,28 @@
-import type { VNodeProps } from 'vue'
 import type { ExternalToast, ToastClasses, ToastT, ToasterProps } from 'vue-sonner'
 import type { VAvatar, VBtn, VCard, VCardActions, VCardText, VIcon, VProgressLinear } from 'vuetify/components'
-
-type ExtractProps<TComponent> =
-  TComponent extends new () => {
-    $props: infer P
-  }
-    ? Omit<P, keyof VNodeProps>
-    : never
+import type { ComponentProps } from 'vue-component-type-helpers'
 
 export interface ToastProps {
   text: string
   description?: string
   vertical?: boolean
-  cardProps?: ExtractProps<typeof VCard>
-  cardTextProps?: ExtractProps<typeof VCardText>
-  cardActionsProps?: ExtractProps<typeof VCardActions>
+  cardProps?: ComponentProps<typeof VCard>
+  cardTextProps?: ComponentProps<typeof VCardText>
+  cardActionsProps?: ComponentProps<typeof VCardActions>
   action?: {
     label?: string
     onClick?: () => void
-    buttonProps?: ExtractProps<typeof VBtn>
+    buttonProps?: ComponentProps<typeof VBtn>
   }
   prependIcon?: string
-  prependIconProps?: ExtractProps<typeof VIcon>
+  prependIconProps?: ComponentProps<typeof VIcon>
   avatar?: string
   multipleAvatars?: string[]
-  avatarProps?: ExtractProps<typeof VAvatar>
+  avatarProps?: ComponentProps<typeof VAvatar>
   progressBar?: boolean
   reverseProgressBar?: boolean
   progressDuration?: number
-  progressBarProps?: ExtractProps<typeof VProgressLinear>
+  progressBarProps?: ComponentProps<typeof VProgressLinear>
   loading?: boolean
 }
 

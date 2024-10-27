@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      vue-component-type-helpers:
+        specifier: ^2.1.8
+        version: 2.1.8
       vue-sonner:
         specifier: ^1.2.3
         version: 1.2.3
@@ -2731,6 +2734,9 @@ packages:
 
   vscode-uri@3.0.8:
     resolution: {integrity: sha512-AyFQ0EVmsOZOlAnxoFOGOq1SQDWAB7C6aqMGS23svWAllfOaxbuFvcT8D1i8z3Gyn8fraVeZNNmN6e9bxxXkKw==}
+
+  vue-component-type-helpers@2.1.8:
+    resolution: {integrity: sha512-ii36gDzrYAfOQIkOlo44yceDdT5269gKmNGxf07Qx6seH2U50+tQ2ol02XLhYPmxrh6YabAsOdte8WDrpaO6Tw==}
 
   vue-eslint-parser@9.4.2:
     resolution: {integrity: sha512-Ry9oiGmCAK91HrKMtCrKFWmSFWvYkpGglCeFAIqDdr9zdXmMMpJOmUJS7WWsW7fX81h6mwHmUZCQQ1E0PkSwYQ==}
@@ -5545,6 +5551,8 @@ snapshots:
       sass: 1.79.5
 
   vscode-uri@3.0.8: {}
+
+  vue-component-type-helpers@2.1.8: {}
 
   vue-eslint-parser@9.4.2(eslint@9.2.0):
     dependencies:
