@@ -45,7 +45,7 @@
     "dev:preview": "vite preview",
     "lint": "eslint .",
     "prepublishOnly": "pnpm build",
-    "release": "bumpp && npm publish"
+    "release": "changeset publish"
   },
   "peerDependencies": {
     "vue": "^3.3.0",
@@ -56,6 +56,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.16.1",
+    "@changesets/cli": "^2.27.9",
     "@mdi/font": "^7.4.47",
     "@microsoft/api-extractor": "^7.47.10",
     "@types/node": "^20.12.8",
