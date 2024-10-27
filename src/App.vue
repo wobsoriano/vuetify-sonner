@@ -6,8 +6,8 @@ import Types from './Types.vue'
 import Expand from './Expand.vue'
 import WithProgressBars from './WithProgressBars.vue'
 import WithAvatars from './WithAvatars.vue'
+import { VSonner } from '@/index'
 import type { Position as PositionType } from '@/types'
-import { VSonner } from '@/.'
 
 const position = ref<PositionType>('bottom-right')
 const expand = ref(false)

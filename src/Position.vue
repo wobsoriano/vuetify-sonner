@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { toast } from '@/index'
 import type { Position } from '@/types'
-import { toast } from '@/.'
 
 const props = defineProps<{
   position: Position

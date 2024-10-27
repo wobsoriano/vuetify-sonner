@@ -45,7 +45,7 @@ export default defineConfig(({ mode }) => {
     ],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '/lib'),
+        '@/': `${path.resolve(__dirname, 'lib')}/`,
       },
     },
     ...userConfig,

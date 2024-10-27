@@ -5,7 +5,7 @@ import type { ExternalToast, ToastProps } from './types'
 
 type ProgressProps = Pick<ExternalToast, 'duration'>
   & Pick<ToastProps, 'progressBarProps'>
-  & { isPaused: boolean, reverseProgressBar: boolean }
+  & { isPaused: boolean, reverseProgressBar?: boolean }
 
 const props = withDefaults(defineProps<ProgressProps>(), {
   duration: 5000,

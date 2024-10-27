@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { toast } from '@/.'
+import { toast } from '@/index'
 </script>
 
 <template>
