@@ -74,5 +74,24 @@ function promiseError() {
         Promise (error)
       </v-btn>
     </div>
+    <v-sheet
+      class="mt-4 code-sheet"
+      color="grey-lighten-4"
+      rounded="lg"
+    >
+      <code>toast('Progress bar', { progressBar: true, progressBarProps: { color: 'error', height: 12 } })</code>
+    </v-sheet>
   </div>
 </template>
+
+<style>
+.code-sheet {
+  padding: 12px 16px;
+}
+
+.code-sheet code {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+  font-size: 14px;
+  color: #333;
+}
+</style>

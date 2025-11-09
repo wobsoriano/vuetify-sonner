@@ -1,10 +1,18 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { toast } from '@/index'
 
-defineProps<{
+const props = defineProps<{
   expand: boolean
 }>()
 const emit = defineEmits(['update:expand'])
+
+const codeMap: Record<string, string> = {
+  true: '<VSonner expand :visible-toasts="9" />',
+  false: '<VSonner :expand="false" :visible-toasts="3" />',
+}
+
+const code = computed(() => codeMap[String(props.expand)])
 
 function onClick(value: boolean) {
   toast('Event has been created', {
@@ -27,16 +35,33 @@ function onClick(value: boolean) {
         Default
       </v-btn>
     </div>
+    <v-sheet
+      class="mt-4 code-sheet"
+      color="grey-lighten-4"
+      rounded="lg"
+    >
+      <code>{{ code }}</code>
+    </v-sheet>
   </div>
 </template>
 
 <style>
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  overflow: auto;
   margin: 0 calc(-1 * var(--side-padding));
   padding: 4px var(--side-padding);
   position: relative;
+}
+
+.code-sheet {
+  padding: 12px 16px;
+}
+
+.code-sheet code {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+  font-size: 14px;
+  color: #333;
 }
 </style>

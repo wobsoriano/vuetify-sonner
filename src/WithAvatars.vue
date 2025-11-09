@@ -62,5 +62,24 @@ import { toast } from '@/index'
         Multiple With Icon
       </v-btn>
     </div>
+    <v-sheet
+      class="mt-4 code-sheet"
+      color="grey-lighten-4"
+      rounded="lg"
+    >
+      <code>toast('This toast has an avatar', { avatar: 'https://...' })</code>
+    </v-sheet>
   </div>
 </template>
+
+<style>
+.code-sheet {
+  padding: 12px 16px;
+}
+
+.code-sheet code {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+  font-size: 14px;
+  color: #333;
+}
+</style>

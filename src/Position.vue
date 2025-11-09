@@ -39,16 +39,33 @@ function onClick(position: (typeof positions)[number]) {
         {{ p }}
       </v-btn>
     </div>
+    <v-sheet
+      class="mt-4 code-sheet"
+      color="grey-lighten-4"
+      rounded="lg"
+    >
+      <code>&lt;VSonner position="{{ position }}" /&gt;</code>
+    </v-sheet>
   </div>
 </template>
 
 <style>
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  overflow: auto;
   margin: 0 calc(-1 * var(--side-padding));
   padding: 4px var(--side-padding);
   position: relative;
+}
+
+.code-sheet {
+  padding: 12px 16px;
+}
+
+.code-sheet code {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+  font-size: 14px;
+  color: #333;
 }
 </style>
