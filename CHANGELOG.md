@@ -1,5 +1,11 @@
 # vuetify-sonner
 
+## 0.4.0
+
+### Minor Changes
+
+- 91d52f8: Bump vue-sonner to v2
+
 ## 0.3.21
 
 ### Patch Changes
