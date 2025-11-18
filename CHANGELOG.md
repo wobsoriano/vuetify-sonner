@@ -1,5 +1,11 @@
 # vuetify-sonner
 
+## 0.4.2
+
+### Patch Changes
+
+- d2dfb95: Fix incorrect styles export
+
 ## 0.4.1
 
 ### Patch Changes
