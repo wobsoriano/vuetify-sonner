@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
       cssCodeSplit: false,
       sourcemap: true,
       rollupOptions: {
-        external: ['vue', 'vuetify', /vuetify\/.+/, 'vue-sonner', 'vue-sonner/style.css'],
+        external: ['vue', 'vuetify', /vuetify\/.+/, 'vue-sonner'],
         output: [
           {
             format: 'cjs',
