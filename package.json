@@ -27,8 +27,8 @@
       "require": "./dist/vuetify-sonner.cjs"
     },
     "./style.css": {
-      "import": "./dist/style.css",
-      "require": "./dist/style.css"
+      "import": "./dist/vuetify-sonner.css",
+      "require": "./dist/vuetify-sonner.css"
     }
   },
   "main": "./dist/vuetify-sonner.cjs",
