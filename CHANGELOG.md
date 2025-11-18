@@ -1,5 +1,11 @@
 # vuetify-sonner
 
+## 0.4.1
+
+### Patch Changes
+
+- 67e2931: Fix missing vue-sonner styles
+
 ## 0.4.0
 
 ### Minor Changes
